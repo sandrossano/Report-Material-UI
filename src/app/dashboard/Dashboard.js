@@ -31,10 +31,9 @@ const Dashboard = () => {
       <Page>
         {/*<Page.Title>Dashboard</Page.Title>*/}
         <Image
-          style={{ height: 100, resizeMode: "contain" }}
+          style={{ height: 150, resizeMode: "contain" }}
           source={{
-            uri:
-              "https://st.hlstatic.it/files/Image/loghiAz/lvi6q7cdt7lxjmq2fkcstz0fkwz5.png"
+            uri: "logokey.png"
           }}
         />
         <Grid

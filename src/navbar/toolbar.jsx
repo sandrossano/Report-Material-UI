@@ -71,6 +71,9 @@ const styles = (theme) => ({
       display: "flex"
     }
   },
+  Logo: {
+    padding: "5px 0 5px 0"
+  },
   sectionMobile: {
     display: "flex",
     [theme.breakpoints.up("md")]: {
@@ -176,9 +179,15 @@ const ToolbarComponent = (props) => {
           </IconButton>
 
           <div className={classes.title}>
-            <Typography className={classes.title} variant="h6" noWrap>
+            <img
+              src="logokey2.png"
+              alt="Keytech"
+              className={classes.Logo}
+              style={{ height: "60px" }}
+            />
+            {/*            <Typography className={classes.title} variant="h6" noWrap>
               Keytech
-            </Typography>
+            </Typography>*/}
 
             {/*
             <div className={classes.search}>
