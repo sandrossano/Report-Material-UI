@@ -33,7 +33,7 @@ html {
   transform: translate(-50%, -50%);
 }
 .LoginBox .mercury-logologin {
-  background: url("../public/logokey.png");
+  background: url("./logokey.png");
   text-align: center;
   background-repeat: no-repeat;
   background-size: cover;
