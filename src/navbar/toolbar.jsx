@@ -224,6 +224,19 @@ const ToolbarComponent = (props) => {
           <div className={classes.grow} />
 
           <div className={classes.sectionDesktop}>
+            <IconButton
+              aria-label="Exit"
+              color="inherit"
+              onClick={() => {
+                sessionStorage.clear();
+                window.open("/login");
+              }}
+            >
+              <Badge badgeContent={0} color="secondary">
+                <PowerSettingsNewIcon />
+              </Badge>
+            </IconButton>
+
             <IconButton aria-label="show 4 new mails" color="inherit">
               <Badge badgeContent={4} color="secondary">
                 <MailIcon />

@@ -15,7 +15,7 @@ class Dashboard extends React.Component {
 
   componentDidMount = () => {
     if (window.sessionStorage.getItem("logged") === "X") {
-      window.open("/login");
+      window.open("/login", "_self");
     }
     window.sessionStorage.getItem("user");
   };
