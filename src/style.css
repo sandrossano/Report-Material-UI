@@ -33,6 +33,7 @@ html {
   transform: translate(-50%, -50%);
 }
 .LoginBox .mercury-logologin {
+  /*solo per AWS*/
   background: url("./logokey.png");
   text-align: center;
   background-repeat: no-repeat;

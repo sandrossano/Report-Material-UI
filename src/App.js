@@ -6,7 +6,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import { Provider } from "react-redux";
 import styled from "styled-components";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-
+import Login from "./Login";
 import COLORS from "./constants/colors";
 import Dashboard from "./app/dashboard/Dashboard";
 import Navigation from "./app/navigation/Navigation";
@@ -79,6 +79,7 @@ export default function App() {
         <Navigation />
         <br />
         <Switch>
+          <Route path="/login" component={Login} />
           <Route path="/shops">
             <Shops />
           </Route>

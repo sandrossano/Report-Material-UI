@@ -12,7 +12,7 @@ export default function App() {
       <div className="App">
         <Switch />
         <Route path="/" exact component={Login} />
-        <Route path="/Dashboard" component={App2} />
+        <Route path="/dashboard" component={App2} />
         <Switch />
       </div>
       ,

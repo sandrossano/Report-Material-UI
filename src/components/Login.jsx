@@ -24,8 +24,11 @@ class Login extends React.Component {
     if (email !== "sandro" || password !== "sandro") {
       Toast("User o Password errata", "error");
       event.preventDefault();
+      window.sessionStorage.setItem("logged", "");
       return false;
     } else {
+      window.sessionStorage.setItem("logged", "X");
+      window.sessionStorage.setItem("user", email);
       return true;
     }
   }
@@ -35,7 +38,7 @@ class Login extends React.Component {
         <div className="backgroundLogin"> </div>
         <div className="LoginBox">
           <div className="mercury-logologin" />
-          <form action="/Dashboard" onSubmit={this.handleSubmit}>
+          <form action="/dashboard" onSubmit={this.handleSubmit}>
             <div className="UserLogin">
               <label htmlFor="userName" className="control-Element">
                 Username

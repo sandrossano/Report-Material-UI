@@ -11,6 +11,7 @@ import {
   Menu
 } from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
+import PowerSettingsNewIcon from "@material-ui/icons/PowerSettingsNew";
 import SearchIcon from "@material-ui/icons/Search";
 import AccountCircle from "@material-ui/icons/AccountCircle";
 import MailIcon from "@material-ui/icons/Mail";
@@ -134,6 +135,21 @@ const ToolbarComponent = (props) => {
       open={mobileMoreAnchorEl}
       onClose={handleMobileMenuClose}
     >
+      <MenuItem>
+        <IconButton
+          aria-label="Exit"
+          color="inherit"
+          onClick={() => {
+            sessionStorage.clear();
+            window.open("/login");
+          }}
+        >
+          <Badge badgeContent={0} color="secondary">
+            <PowerSettingsNewIcon />
+          </Badge>
+        </IconButton>
+        <p>Esci</p>
+      </MenuItem>
       <MenuItem>
         <IconButton aria-label="show 4 new mails" color="inherit">
           <Badge badgeContent={4} color="secondary">
