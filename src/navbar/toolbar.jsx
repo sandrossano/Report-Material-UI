@@ -150,15 +150,13 @@ const ToolbarComponent = (props) => {
         </p>
       </MenuItem>
 
-      <MenuItem>
-        <IconButton
-          aria-label="Exit"
-          color="inherit"
-          onClick={() => {
-            sessionStorage.clear();
-            window.open("/login", "_self");
-          }}
-        >
+      <MenuItem
+        onClick={() => {
+          sessionStorage.clear();
+          window.open("/login", "_self");
+        }}
+      >
+        <IconButton aria-label="Exit" color="inherit">
           <Badge badgeContent={0} color="secondary">
             <PowerSettingsNewIcon />
           </Badge>
