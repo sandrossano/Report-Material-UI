@@ -10,7 +10,8 @@ class Dashboard extends React.Component {
   constructor(props) {
     super(props);
     if (window.sessionStorage.getItem("logged") !== "X") {
-      window.open("/login", "_self");
+      window.location.href = "/login";
+      //window.open("/login", "_self");
     }
     window.sessionStorage.getItem("user");
     this.state = {};
