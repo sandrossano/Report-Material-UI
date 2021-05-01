@@ -141,7 +141,7 @@ const ToolbarComponent = (props) => {
           color="inherit"
           onClick={() => {
             sessionStorage.clear();
-            window.open("/login");
+            window.open("/login", "_self");
           }}
         >
           <Badge badgeContent={0} color="secondary">
@@ -229,7 +229,7 @@ const ToolbarComponent = (props) => {
               color="inherit"
               onClick={() => {
                 sessionStorage.clear();
-                window.open("/login");
+                window.open("/login", "_self");
               }}
             >
               <Badge badgeContent={0} color="secondary">
