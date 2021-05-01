@@ -136,6 +136,21 @@ const ToolbarComponent = (props) => {
       onClose={handleMobileMenuClose}
     >
       <MenuItem>
+        {/*onClick={handleProfileMenuOpen}>*/}
+        <IconButton
+          aria-label="account of current user"
+          aria-controls="primary-search-account-menu"
+          aria-haspopup="true"
+          color="inherit"
+        >
+          <AccountCircle />
+        </IconButton>
+        <p style={{ padding: "10px 0 0" }}>
+          {window.sessionStorage.getItem("user")}
+        </p>
+      </MenuItem>
+
+      <MenuItem>
         <IconButton
           aria-label="Exit"
           color="inherit"
@@ -148,8 +163,9 @@ const ToolbarComponent = (props) => {
             <PowerSettingsNewIcon />
           </Badge>
         </IconButton>
-        <p>Esci</p>
+        <p style={{ padding: "10px 0 0" }}>Esci</p>
       </MenuItem>
+      {/* 
       <MenuItem>
         <IconButton aria-label="show 4 new mails" color="inherit">
           <Badge badgeContent={4} color="secondary">
@@ -165,18 +181,7 @@ const ToolbarComponent = (props) => {
           </Badge>
         </IconButton>
         <p>Notifications</p>
-      </MenuItem>
-      <MenuItem onClick={handleProfileMenuOpen}>
-        <IconButton
-          aria-label="account of current user"
-          aria-controls="primary-search-account-menu"
-          aria-haspopup="true"
-          color="inherit"
-        >
-          <AccountCircle />
-        </IconButton>
-        <p>Profile</p>
-      </MenuItem>
+      </MenuItem>*/}
     </Menu>
   );
 
@@ -224,9 +229,26 @@ const ToolbarComponent = (props) => {
           <div className={classes.grow} />
 
           <div className={classes.sectionDesktop}>
+            <div style={{ padding: "14px 0" }}>
+              Ciao {window.sessionStorage.getItem("user")}
+            </div>
+
+            <IconButton
+              edge="end"
+              aria-label="account of current user"
+              aria-controls={menuId}
+              aria-haspopup="true"
+              color="inherit"
+            >
+              {/* 
+              onClick={handleProfileMenuOpen}
+            > */}
+              <AccountCircle />
+            </IconButton>
             <IconButton
               aria-label="Exit"
               color="inherit"
+              style={{ marginLeft: "10px" }}
               onClick={() => {
                 sessionStorage.clear();
                 window.open("/login", "_self");
@@ -236,7 +258,7 @@ const ToolbarComponent = (props) => {
                 <PowerSettingsNewIcon />
               </Badge>
             </IconButton>
-
+            {/*
             <IconButton aria-label="show 4 new mails" color="inherit">
               <Badge badgeContent={4} color="secondary">
                 <MailIcon />
@@ -247,16 +269,7 @@ const ToolbarComponent = (props) => {
                 <NotificationsIcon />
               </Badge>
             </IconButton>
-            <IconButton
-              edge="end"
-              aria-label="account of current user"
-              aria-controls={menuId}
-              aria-haspopup="true"
-              onClick={handleProfileMenuOpen}
-              color="inherit"
-            >
-              <AccountCircle />
-            </IconButton>
+*/}
           </div>
           <div className={classes.sectionMobile}>
             <IconButton
