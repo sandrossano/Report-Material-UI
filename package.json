@@ -19,7 +19,7 @@
     "ag-grid-enterprise-free": "20.2.0",
     "ag-grid-react": "25.1.0",
     "bootstrap": "4.6.0",
-    "node-sass": "5.0.0",
+    "node-sass": "4.0.0",
     "react": "17.0.0",
     "react-avatar": "3.9.7",
     "react-bootstrap": "1.4.0",
