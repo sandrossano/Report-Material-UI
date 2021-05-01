@@ -9,16 +9,15 @@ import { DesktopWindows } from "@material-ui/icons";
 class Dashboard extends React.Component {
   constructor(props) {
     super(props);
+    if (window.sessionStorage.getItem("logged") !== "X") {
+      window.open("/login", "_self");
+    }
+    window.sessionStorage.getItem("user");
     this.state = {};
     //this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  componentDidMount = () => {
-    if (window.sessionStorage.getItem("logged") === "X") {
-      window.open("/login", "_self");
-    }
-    window.sessionStorage.getItem("user");
-  };
+  componentDidMount = () => {};
 
   handleSubmit(event) {}
 
