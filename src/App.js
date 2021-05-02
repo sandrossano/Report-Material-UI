@@ -11,7 +11,7 @@ import COLORS from "./constants/colors";
 import Dashboard from "./app/dashboard/Dashboard";
 import Navigation from "./app/navigation/Navigation";
 import Header from "./app/header/Header";
-import Shops from "./app/shops/Shops";
+import Pdf from "./app/pdf/Pdf";
 import Product from "./app/product/Product";
 import Sales from "./app/sales/Sales";
 import Reports from "./app/reports/Reports";
@@ -80,8 +80,8 @@ export default function App() {
         <br />
         <Switch>
           <Route path="/login" component={Login} />
-          <Route path="/shops">
-            <Shops />
+          <Route path="/pdf">
+            <Pdf />
           </Route>
           <Route path="/product">
             <Product />

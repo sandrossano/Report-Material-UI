@@ -9,7 +9,7 @@ const Container2 = styled.div``;
 
 const Reports = () => {
   return (
-    <Container2 fluid>
+    <Container2 fluid style={{ overflowY: "scroll" }}>
       <Page>
         <Page.Title>Reports</Page.Title>
 

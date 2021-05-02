@@ -17,7 +17,8 @@ import { useHistory } from "react-router";
 
 const items1 = [
   { title: "Dashboard", icon: "dashboard", link: "/" },
-  { title: "Shops", icon: "shopping-cart-loaded", link: "/shops" },
+  { title: "Pdf", icon: "pdf", link: "/pdf" },
+  //{ title: "Shops", icon: "shopping-cart-loaded", link: "/shops" },
   { title: "Product", icon: "bullish", link: "/product" },
   { title: "Sales", icon: "briefcase", link: "/sales" }
 ];

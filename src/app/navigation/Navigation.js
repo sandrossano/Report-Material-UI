@@ -35,7 +35,8 @@ const NavigationItem = styled.div`
 
 const items = [
   { title: "Dashboard", icon: "dashboard", link: "/" },
-  { title: "Shops", icon: "shopping-cart-loaded", link: "/shops" },
+  { title: "Pdf", icon: "pdf", link: "/pdf" },
+  //{ title: "Pdf", icon: "shopping-cart-loaded", link: "/pdf" },
   { title: "Product", icon: "bullish", link: "/product" },
   { title: "Sales", icon: "briefcase", link: "/sales" },
   { title: "Reports", icon: "presentation", link: "/reports" },
