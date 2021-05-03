@@ -1,7 +1,8 @@
 import React, { Component, Fragment } from "react";
-
+import style from "../style.css";
 import { Link } from "react-router-dom";
 import Toast from "toast-me";
+import ReactDOM from "react-dom";
 import PdfSample from "../constants/PdfSample";
 import Iframe from "react-iframe";
 import PDFViewer from "pdf-viewer-reactjs";
@@ -13,7 +14,8 @@ class Pdf extends React.Component {
     super(props);
     this.state = {
       stringbase64: PdfSample.base,
-      pdf: ""
+      pdf: "",
+      iFrameHeight: ""
     };
 
     if (window.sessionStorage.getItem("logged") !== "X") {
@@ -30,7 +32,12 @@ class Pdf extends React.Component {
 
     this.downloadpdf = this.downloadpdf.bind(this);
   }
-
+  componentDidMount() {
+    const obj = ReactDOM.findDOMNode(this);
+    this.setState({
+      iFrameHeight: window.innerHeight - 250 + "px"
+    });
+  }
   downloadpdf() {
     /*this.setState({
       pdf: base64.base64Decode(this.state.stringbase64, "PdfFileName")
@@ -59,11 +66,10 @@ class Pdf extends React.Component {
         <Iframe
           url={url}
           width="100%"
-          style={{ height: "68vh" }}
           type="application/pdf"
           //height="100%"
           id="myId"
-          className="myClassname"
+          height={this.state.iFrameHeight}
           display="initial"
           position="relative"
         />
