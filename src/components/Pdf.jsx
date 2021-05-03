@@ -59,7 +59,7 @@ class Pdf extends React.Component {
         <Iframe
           url={url}
           width="100%"
-          height="68vh"
+          style={{ height: "68vh" }}
           type="application/pdf"
           //height="100%"
           id="myId"
