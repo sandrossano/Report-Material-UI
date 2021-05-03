@@ -10,6 +10,12 @@ class Login extends React.Component {
       email: "",
       password: ""
     };
+
+    if (window.sessionStorage.getItem("logged") === "X") {
+      //window.location.href = "/login";
+      window.open("/dashboard", "_self");
+    }
+
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 

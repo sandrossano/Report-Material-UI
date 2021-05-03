@@ -13,7 +13,25 @@ export default function App() {
         <Switch />
         <Route path="/" exact component={Login} />
         <Route path="/login" exact component={Login} />
-        <Route path="/dashboard" component={App2} />
+        <Route path="/dashboard" exact component={App2} />
+        <Route path="/pdf" exact component={App2} />
+        <Route path="/reports" exact component={App2} />
+
+        {/*      
+          <Route path="/product">
+            <Product />
+          </Route>
+          <Route path="/sales">
+            <Sales />
+          </Route>
+
+          <Route path="/settings">
+            <Settings />
+          </Route>
+          <Route path="/">
+            <Dashboard />
+          </Route>
+*/}
         <Switch />
       </div>
       ,

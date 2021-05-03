@@ -19,15 +19,14 @@ class Pdf extends React.Component {
     if (window.sessionStorage.getItem("logged") !== "X") {
       //window.location.href = "/login";
       window.open("/login", "_self");
-    } else {
+    } /* else {
       if (window.performance) {
         if (performance.navigation.type == 1) {
           window.open("/", "_self");
         }
       }
-    }
+    }*/
     window.sessionStorage.getItem("user");
-    this.state = {};
 
     this.downloadpdf = this.downloadpdf.bind(this);
   }
@@ -60,6 +59,7 @@ class Pdf extends React.Component {
         <Iframe
           url={url}
           width="100%"
+          height="68vh"
           type="application/pdf"
           //height="100%"
           id="myId"

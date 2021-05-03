@@ -12,13 +12,13 @@ class Dashboard extends React.Component {
     if (window.sessionStorage.getItem("logged") !== "X") {
       //window.location.href = "/login";
       window.open("/login", "_self");
-    } else {
+    } /*else {
       if (window.performance) {
         if (performance.navigation.type == 1) {
           window.open("/", "_self");
         }
       }
-    }
+    }*/
     window.sessionStorage.getItem("user");
     this.state = {};
     //this.handleSubmit = this.handleSubmit.bind(this);
