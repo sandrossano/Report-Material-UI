@@ -9,8 +9,8 @@ html {
   font-size: 100%;
   overflow: hidden;
 }
+
 .backgroundLogin {
-  background-size: cover;
   background: url("https://i.pinimg.com/originals/fc/b0/72/fcb07201723665e2b3073a21430dd62a.jpg");
   background-repeat: no-repeat;
   min-height: 100%;
@@ -19,6 +19,7 @@ html {
   position: fixed;
   top: 0;
   left: 0;
+  background-size: cover;
 }
 
 .LoginBox {
