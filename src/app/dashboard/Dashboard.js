@@ -11,12 +11,12 @@ const Container = styled.div``;
 
 const Dashboard = () => {
   return (
-    <ScrollView>
+    <Container fluid style={{ overflowY: "scroll" }}>
       <Page>
         {/*<Page.Title>Dashboard</Page.Title>*/}
         <Dash />
       </Page>
-    </ScrollView>
+    </Container>
   );
 };
 
