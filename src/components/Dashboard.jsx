@@ -58,7 +58,7 @@ class Dashboard extends React.Component {
         <Grid
           gap="20px"
           rows="100px 100px 100px 100px 100px 100px 100px"
-          columns="repeat(auto-fill, minmax(200px, 1fr))"
+          columns="repeat(auto-fill, minmax(300px, 1fr))"
           /*0.5fr 0.5fr*/
           areas={`
             'info1 info2'
