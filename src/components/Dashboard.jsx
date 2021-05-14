@@ -53,7 +53,7 @@ class Dashboard extends React.Component {
     ];
 
     return (
-      <div style={{ width: "100%", height: "100vh" }}>
+      <div style={{ width: "100%", height: "90vh" }}>
         <Grid
           gap="20px"
           rows="100px 100px 100px 100px 100px 100px 100px"
