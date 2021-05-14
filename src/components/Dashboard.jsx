@@ -21,10 +21,17 @@ class Dashboard extends React.Component {
       }
     }*/
     window.sessionStorage.getItem("user");
-    this.state = {};
-    //this.handleSubmit = this.handleSubmit.bind(this);
+    this.state = {
+      refreshing: false
+    }; //this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+  _onRefresh = () => {
+    this.setState({ refreshing: true });
+    fetchData().then(() => {
+      this.setState({ refreshing: false });
+    });
+  };
   componentDidMount = () => {};
 
   handleSubmit(event) {}

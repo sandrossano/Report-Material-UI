@@ -4,7 +4,7 @@ import styled from "styled-components";
 import Page from "../../components/Page";
 import Grid from "../../components/Grid";
 import Card from "../../components/Card";
-import { Image, ScrollView } from "react-native";
+
 import Dash from "../../components/Dashboard";
 
 const Container2 = styled.div``;

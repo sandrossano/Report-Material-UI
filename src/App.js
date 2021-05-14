@@ -27,6 +27,7 @@ import {
   faCalendar,
   faClipboardCheck
 } from "@fortawesome/free-solid-svg-icons";
+import PullToRefresh from "pull-to-refresh-react";
 
 library.add(faCoffee, faHome, faShoppingBasket, faCalendar, faClipboardCheck);
 
@@ -68,38 +69,50 @@ export default function App() {
   );
 }*/
 }
+
 export default function App() {
   return (
-    <Router>
-      <Container2>
-        {/*<Header />*/}
-        <CssBaseline />
-        <Navbar />
-        <br />
-        <Navigation />
-        <br />
-        <Switch>
-          <Route path="/login" component={Login} />
-          <Route path="/pdf">
-            <Pdf />
-          </Route>
-          <Route path="/product">
-            <Product />
-          </Route>
-          <Route path="/sales">
-            <Sales />
-          </Route>
-          <Route path="/reports">
-            <Reports />
-          </Route>
-          <Route path="/settings">
-            <Settings />
-          </Route>
-          <Route path="/">
-            <Dashboard />
-          </Route>
-        </Switch>
-      </Container2>
-    </Router>
+    <PullToRefresh
+      options={{ pullDownHeight: 100 }}
+      onRefresh={
+        new Promise((resolve, reject) => {
+          setTimeout(() => {
+            resolve();
+          }, 5000);
+        })
+      }
+    >
+      <Router>
+        <Container2>
+          {/*<Header />*/}
+          <CssBaseline />
+          <Navbar />
+          <br />
+          <Navigation />
+          <br />
+          <Switch>
+            <Route path="/login" component={Login} />
+            <Route path="/pdf">
+              <Pdf />
+            </Route>
+            <Route path="/product">
+              <Product />
+            </Route>
+            <Route path="/sales">
+              <Sales />
+            </Route>
+            <Route path="/reports">
+              <Reports />
+            </Route>
+            <Route path="/settings">
+              <Settings />
+            </Route>
+            <Route path="/">
+              <Dashboard />
+            </Route>
+          </Switch>
+        </Container2>
+      </Router>
+    </PullToRefresh>
   );
 }
