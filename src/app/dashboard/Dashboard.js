@@ -7,16 +7,16 @@ import Card from "../../components/Card";
 import { Image, ScrollView } from "react-native";
 import Dash from "../../components/Dashboard";
 
-const Container = styled.div``;
+const Container2 = styled.div``;
 
 const Dashboard = () => {
   return (
-    <Container fluid style={{ overflowY: "scroll" }}>
+    <Container2 fluid style={{ overflowY: "scroll" }}>
       <Page>
         {/*<Page.Title>Dashboard</Page.Title>*/}
         <Dash />
       </Page>
-    </Container>
+    </Container2>
   );
 };
 
