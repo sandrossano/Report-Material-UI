@@ -4,19 +4,20 @@ import COLORS from "../../constants/colors";
 
 const GridContainer = styled.div`
   display: grid;
-  margin: 2% 8%;
-  column-gap: 8%;
+
   ${({ gap, columns, rows, areas }) => `
     grid-gap: ${gap};
     grid-template-columns: ${columns};
     grid-template-rows: ${rows};
     grid-template-areas: ${areas};
   `}
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  margin: 2% 8%;
 `;
 
 const Grid = ({
   children,
-  gap = "10px",
+  gap = "20px",
   columns = "",
   rows = "",
   areas = "",

@@ -1,11 +1,14 @@
 import React, { Component, Fragment } from "react";
 import Grid from "./Grid";
 import Card from "./Card";
+import styled from "styled-components";
 import COLORS from "../constants/colors";
 import { Image } from "react-native";
 import css from "../styles.css";
 import { Link } from "react-router-dom";
 import { DesktopWindows } from "@material-ui/icons";
+
+const Container = styled.div``;
 
 class Dashboard extends React.Component {
   constructor(props) {
@@ -25,7 +28,9 @@ class Dashboard extends React.Component {
     //this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  componentDidMount = () => {};
+  componentDidMount() {}
+
+  componentDidUpdate() {}
 
   handleSubmit(event) {}
 
@@ -48,20 +53,13 @@ class Dashboard extends React.Component {
     ];
 
     return (
-      <div>
-        <Image
-          style={{ height: 150, resizeMode: "contain" }}
-          source={{
-            uri: "logokey.png"
-          }}
-        />
+      <div style={{ width: "100%", height: "100vh" }}>
         <Grid
           gap="20px"
           rows="100px 100px 100px 100px 100px 100px 100px"
-          columns="repeat(auto-fill, minmax(300px, 1fr))"
-          /*0.5fr 0.5fr*/
+          columns="0.5fr 0.5fr"
           areas={`
-            'info1 info2'
+            'info1 info2 info5 info6'
             'graph graph'
             'info3 info4'
             'graph graph'
@@ -71,7 +69,6 @@ class Dashboard extends React.Component {
             'map map map map'
             'map map map map'
           `}
-          class={css.CardCustom}
         >
           {infoItems.map((item, idx) => (
             <Card.Info
@@ -79,6 +76,7 @@ class Dashboard extends React.Component {
               number={item.number}
               icon={item.icon}
               color={item.color}
+              class={css.CardCustom}
               style={{ gridArea: `info${idx + 1}` }}
             >
               {item.title}
