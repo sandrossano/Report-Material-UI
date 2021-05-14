@@ -93,3 +93,7 @@
   left: 35%;
   position: fixed;
 }
+
+.CardCustom {
+  max-width: 15px;
+}

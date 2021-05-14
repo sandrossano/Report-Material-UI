@@ -3,6 +3,7 @@ import Grid from "./Grid";
 import Card from "./Card";
 import COLORS from "../constants/colors";
 import { Image } from "react-native";
+import css from "../styles.css";
 import { Link } from "react-router-dom";
 import { DesktopWindows } from "@material-ui/icons";
 
@@ -32,7 +33,7 @@ class Dashboard extends React.Component {
     const infoItems = [
       { title: "Reports", icon: "speaker", number: 36, color: COLORS.green },
       {
-        title: "Moneeey",
+        title: "Money",
         icon: "money-bag-pound",
         number: "$ 45,275",
         color: COLORS.yellow
@@ -57,9 +58,9 @@ class Dashboard extends React.Component {
         <Grid
           gap="20px"
           rows="100px 100px 100px 100px 100px 100px 100px"
-          columns="1fr 1fr"
+          columns="0.5fr 0.5fr"
           areas={`
-            'info1 info2'
+            'info1 info2 info5 info6'
             'graph graph'
             'info3 info4'
             'graph graph'
@@ -76,6 +77,7 @@ class Dashboard extends React.Component {
               number={item.number}
               icon={item.icon}
               color={item.color}
+              class={css.CardCustom}
               style={{ gridArea: `info${idx + 1}` }}
             >
               {item.title}
