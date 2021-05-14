@@ -4,7 +4,8 @@ import COLORS from "../../constants/colors";
 
 const GridContainer = styled.div`
   display: grid;
-
+  margin: 2% 8%;
+  column-gap: 8%;
   ${({ gap, columns, rows, areas }) => `
     grid-gap: ${gap};
     grid-template-columns: ${columns};
