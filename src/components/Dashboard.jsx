@@ -70,6 +70,7 @@ class Dashboard extends React.Component {
             'map map map map'
             'map map map map'
           `}
+          class={css.CardCustom}
         >
           {infoItems.map((item, idx) => (
             <Card.Info
@@ -77,7 +78,6 @@ class Dashboard extends React.Component {
               number={item.number}
               icon={item.icon}
               color={item.color}
-              class={css.CardCustom}
               style={{ gridArea: `info${idx + 1}` }}
             >
               {item.title}
