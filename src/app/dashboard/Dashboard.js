@@ -6,7 +6,6 @@ import Grid from "../../components/Grid";
 import Card from "../../components/Card";
 import { Image } from "react-native";
 import Dash from "../../components/Dashboard";
-
 import { Row, Col } from "react-bootstrap";
 const Container = styled.div``;
 
