@@ -61,7 +61,7 @@ class Dashboard extends React.Component {
           columns="repeat(auto-fill, minmax(200px, 1fr))"
           /*0.5fr 0.5fr*/
           areas={`
-            'info1 info2 info5 info6'
+            'info1 info2'
             'graph graph'
             'info3 info4'
             'graph graph'
