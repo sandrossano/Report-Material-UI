@@ -1,14 +1,11 @@
 import React, { Component, Fragment } from "react";
 import Grid from "./Grid";
 import Card from "./Card";
-import styled from "styled-components";
 import COLORS from "../constants/colors";
 import { Image } from "react-native";
 import css from "../styles.css";
 import { Link } from "react-router-dom";
 import { DesktopWindows } from "@material-ui/icons";
-
-const Container = styled.div``;
 
 class Dashboard extends React.Component {
   constructor(props) {
@@ -28,9 +25,7 @@ class Dashboard extends React.Component {
     //this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  componentDidMount() {}
-
-  componentDidUpdate() {}
+  componentDidMount = () => {};
 
   handleSubmit(event) {}
 
@@ -53,7 +48,13 @@ class Dashboard extends React.Component {
     ];
 
     return (
-      <div style={{ width: "100%", height: "90vh" }}>
+      <div>
+        <Image
+          style={{ height: 150, resizeMode: "contain" }}
+          source={{
+            uri: "logokey.png"
+          }}
+        />
         <Grid
           gap="20px"
           rows="100px 100px 100px 100px 100px 100px 100px"

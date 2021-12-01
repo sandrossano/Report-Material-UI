@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from "react";
-
+import PasswordField from "material-ui-password-field";
 import { Link } from "react-router-dom";
 import Toast from "toast-me";
 
@@ -61,8 +61,8 @@ class Login extends React.Component {
               <label htmlFor="userpassword" className="control-Element">
                 Password
               </label>
-              <input
-                type="password"
+              <PasswordField
+                //type="password"
                 className="login-control"
                 id="password"
                 onChange={(event) => this.inputChangedHandler(event)}

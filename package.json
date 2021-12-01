@@ -1,8 +1,11 @@
 {
-  "name": "report-material-ui",
+  "name": "react",
   "version": "1.0.0",
-  "description": "",
-  "keywords": [],
+  "description": "React example starter project",
+  "keywords": [
+    "react",
+    "starter"
+  ],
   "main": "src/index.js",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "1.2.32",
@@ -18,6 +21,7 @@
     "base64topdf": "1.1.8",
     "bootstrap": "4.6.0",
     "download-pdf": "0.1.6",
+    "material-ui-password-field": "2.1.2",
     "pdf-viewer-reactjs": "2.2.3",
     "react": "17.0.0",
     "react-avatar": "3.9.7",
@@ -26,7 +30,6 @@
     "react-iframe": "1.8.0",
     "react-loading-overlay": "1.0.1",
     "react-native": "0.64.0",
-    "react-native-scroll-into-view": "2.0.1",
     "react-native-web": "0.16.1",
     "react-redux": "7.2.2",
     "react-router": "5.2.0",

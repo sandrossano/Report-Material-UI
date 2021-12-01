@@ -11,13 +11,11 @@ const GridContainer = styled.div`
     grid-template-rows: ${rows};
     grid-template-areas: ${areas};
   `}
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  margin: 2% 8%;
 `;
 
 const Grid = ({
   children,
-  gap = "20px",
+  gap = "10px",
   columns = "",
   rows = "",
   areas = "",
